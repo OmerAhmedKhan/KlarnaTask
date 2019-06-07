@@ -1,0 +1,62 @@
+Prerequisites
+1) Lunix OS
+2) Python3
+3) Curl (if executing web service endpoint from terminal)
+3) Terminal or web browser
+
+
+Please follow below instruction to create a local server for webservices:
+
+1) Open Lunix terminal
+2) Go to KlarnaPythonTest directory
+3) Execute bash script "playIt.sh"
+4) And Boom your web server is deployed on localhost
+5) To check status of webservice execute "curl http://127.0.0.1:5000/status"
+
+
+Following are the endpoints and their arguments:
+
+1)/status/
+To check the status of a web server
+
+
+2)/fabocciniNumber/
+Arguments: n
+Expanation: To get Faboccini number of a given number provided
+
+Example:
+/fabocciniNumber/?n=3
+Result:
+{
+  "execution_time": 1.9073486328125e-05,
+  "result": 2
+}
+
+
+3)/ackermannNumbers/
+Arguments: n, m
+Expanation: To get Ackermann number of a given number pair provided
+
+Example:
+/ackermannNumbers/?n=1&m=2
+Result:
+{
+  "execution_time": 3.337860107421875e-06,
+  "result": 5
+}
+
+NOTE:
+Max limit for m is 4 due to resource pooling of a server
+
+
+4)/factorial
+Arguments: n
+Expanation: To get Factorial number of a given number provided
+
+Example:
+/fabocciniNumber/?n=3
+Result:
+{
+  "execution_time": 1.71661376953125e-05,
+  "result": 6
+}
